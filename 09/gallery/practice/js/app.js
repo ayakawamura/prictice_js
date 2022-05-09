@@ -33,3 +33,10 @@ for (let i = 0; i < album.length; i++) {
   // サムネ表示
   thumbFlame.insertBefore(thumbImage, null);
 }
+
+thumbFlame.addEventListener("click", function(event){
+  if(event.target.src){
+    mainImage.src = event.target.src;
+    mainMsg.innerHTML = event.target.alt;
+  }
+});
